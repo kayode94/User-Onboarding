@@ -9,8 +9,7 @@ import axios from 'axios';
 //Setting initial States
 
 const initialFormValues = {
-   first_name:'',
-   last_name: '',
+   name:'',
    email: '',
    password:'',
    id:`${Math.floor(Math.random()* 1000)}`,
