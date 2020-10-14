@@ -4,7 +4,7 @@ const UserForm = (props)=>{
     const {values, submit, change, disabled, error} = props
 
     const onSubmit = event =>{
-        event.preventDefaul();
+        event.preventDefault();
         submit();
     }
 
@@ -18,7 +18,7 @@ const UserForm = (props)=>{
 
             <div className="form-group submit">
                 <h2>Add a new User</h2>
-                <button disabled={disabled}>Submit</button>
+                <button onClick={onSubmit}>Submit</button>
                 
                 {/* rendering any validation erros */}
                 <div className='errors'>
@@ -45,7 +45,7 @@ const UserForm = (props)=>{
                     <input 
                     defaultValue={values.last_name}
                     onChange={onChange}
-                    name='last-name'
+                    name='last_name'
                     type='text'
                     />
                 </label>
